@@ -51,6 +51,7 @@ export default class ModalDropdown extends Component {
     onDropdownWillShow: PropTypes.func,
     onDropdownWillHide: PropTypes.func,
     onSelect: PropTypes.func,
+    setButtonText: PropTypes.func
   };
 
   constructor(props) {
@@ -335,7 +336,7 @@ export default class ModalDropdown extends Component {
       this._nextValue = rowData;
       this._nextIndex = rowID;
       this.setState({
-        buttonText: rowData.toString(),
+        buttonText: this.props.setButtonText(rowData),
         selectedIndex: rowID,
       });
     }
