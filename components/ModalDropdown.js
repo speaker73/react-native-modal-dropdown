@@ -69,6 +69,7 @@ export default class ModalDropdown extends Component {
       showDropdown: false,
       buttonText: props.defaultValue,
       selectedIndex: props.defaultIndex,
+      selected: props.options[props.defaultIndex] || {}
     };
   }
 
@@ -338,6 +339,7 @@ export default class ModalDropdown extends Component {
       this.setState({
         buttonText: this.props.setButtonText(rowData),
         selectedIndex: rowID,
+        selected: rowData
       });
     }
     if (!this.props.onDropdownWillHide ||
