@@ -118,6 +118,10 @@ export default class ModalDropdown extends Component {
       });
     });
   }
+  
+  getSelected() {
+    return this.state.selected;
+  }
 
   hide() {
     this.setState({
